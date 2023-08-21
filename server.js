@@ -36,14 +36,9 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("changeMode", data);
   });
 
-  socket.on("changeState1", (data) => {
-    log(`state1 change to ${data}`);
-    socket.broadcast.emit("changeState1", data);
-  });
-
-  socket.on("changeState2", (data) => {
-    log(`state2 change to ${data}`);
-    socket.broadcast.emit("changeState2", data);
+  socket.on("changeState", (data) => {
+    log(`${data} state change `);
+    socket.broadcast.emit("changeState", data);
   });
   /**************************** */
   //xu ly chung

@@ -1,15 +1,41 @@
-
 header {
-    height: 120px;
+  height: 120px;
 }
 
 .bcc-purle {
   background: #2c045e;
-  color: #fff !important;
 }
 
 .bcc-purle2 {
-  background: #d84efb;
+  background: #fcf2e9;
   border-radius: 6px;
-  color: #fff;
+}
+
+.bcc-green1 {
+  background: #38b000;
+  border-radius: 6px;
+}
+
+.bcc-green2 {
+  background: #0ac70f;
+  border-radius: 6px;
+}
+
+.bcc-green3 {
+  background: #008eec33;
+  border-radius: 6px;
+}
+
+.bcc-green4 {
+  background: #88c70a;
+  border-radius: 6px;
+}
+
+.bcc-green5 {
+  background: #bdbc09;
+  border-radius: 6px;
+}
+
+.color-all {
+  color: #053344 !important;
 }
