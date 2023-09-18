@@ -31,34 +31,32 @@
             <h3 class="fs-2 text-body-emphasis">Chọn chế độ</h3>
             <p>Sử dụng nút chế độ thủ công nếu muốn tự mình thay đổi trạng thái của động cơ và bơm</p>
             <div class="form-check form-switch">
-              <button type="button" id="mode" class="btn btn-success">Change</button>
+              <button type="button" id="mode" class="btn btn-success">Đổi</button>
               <label class="form-check-label" for="mode" id="modeLabel">Tự động</label>
             </div>
           </div>
         </div>
         <div class="col d-flex align-items-start">
           <div>
-            <h3 class="fs-2 text-body-emphasis">Điều khiển tạo khí Oxy</h3>
-            <p>Chỉ có thể điều khiển được nếu là chế độ thủ công. Làm quay cánh quạt để tăng lượng oxy hòa tan trong
-              nước</p>
-              <div class="row ">
-                <button id="role1" type="button" class="btn btn-primary col m-2" disabled>1: Bật</button>
-                <button id="role2" type="button" class="btn btn-secondary col m-2" disabled>2: Tắt</button>
-                <button id="role3" type="button" class="btn btn-secondary col m-2" disabled>3: Tắt</button>
-                <button id="role4" type="button" class="btn btn-secondary col m-2" disabled>4: Tắt</button>
-              </div>
+            <h3 class="fs-2 text-body-emphasis">Lựa chọn thiết bị điều khiển</h3>
+            <p>Chỉ có thể điều khiển được nếu là chế độ thủ công. </p>
+            <div class="row ">
+              <button id="role1" type="button" class="btn btn-primary col m-2" disabled>1: Bật</button>
+              <button id="role2" type="button" class="btn btn-secondary col m-2" disabled>2: Tắt</button>
+              <button id="role3" type="button" class="btn btn-secondary col m-2" disabled>3: Tắt</button>
+              <button id="role4" type="button" class="btn btn-secondary col m-2" disabled>4: Tắt</button>
+            </div>
             <div>
-              <button type="button" id="changRole" class="btn btn-success" disabled>Change</button>
+              <button type="button" id="changRole" class="btn btn-success" disabled>Đổi</button>
             </div>
           </div>
         </div>
         <div class="col d-flex align-items-start">
           <div>
             <h3 class="fs-2 text-body-emphasis">Điều chỉnh bơm/van</h3>
-            <p>Chỉ có thể điều khiển được nếu là chế độ thủ công. Khởi động hệ thống bơm và van để thay đổi chỉ số pH
-            </p>
+            <p>Chỉ có thể điều khiển được nếu là chế độ thủ công</p>
             <div class="form-check form-switch">
-              <button type="button" id="changeState" class="btn btn-success" disabled>Change state</button>
+              <button type="button" id="changeState" class="btn btn-success" disabled>Đổi trạng thái</button>
             </div>
           </div>
         </div>
@@ -381,25 +379,25 @@
       },
     };
     const configBuiChart = {
-        type: "line",
-        data: {
-          labels: [
-            60, 58, 56, 54, 52, 50, 48, 46, 44, 42, 40, 38, 36, 34, 32, 30, 28,
-            26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0,
-          ],
-          datasets: [
-            {
-              label: "Bụi (ppm) ",
-              data: [],
-              borderColor: ["rgba(255, 100, 100, 1)"],
-              tension: 0.1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-        },
-      };
+      type: "line",
+      data: {
+        labels: [
+          60, 58, 56, 54, 52, 50, 48, 46, 44, 42, 40, 38, 36, 34, 32, 30, 28,
+          26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0,
+        ],
+        datasets: [
+          {
+            label: "Bụi (ppm) ",
+            data: [],
+            borderColor: ["rgba(255, 100, 100, 1)"],
+            tension: 0.1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    };
 
     const tempChart = new Chart(
       document.getElementById("tempChart").getContext("2d"),
@@ -421,11 +419,11 @@
       document.getElementById("soilHumChart").getContext("2d"),
       configsoilHum
     );
-    
-     const buiChart = new Chart(
-        document.getElementById("buiChart").getContext("2d"),
-        configBuiChart
-      );
+
+    const buiChart = new Chart(
+      document.getElementById("buiChart").getContext("2d"),
+      configBuiChart
+    );
   </script>
   <!-- update chart -->
   <script>

@@ -55,6 +55,6 @@ io.on("connection", (socket) => {
 
 //doi port khac di
 server.listen(3000, () => {
-  log("server is listening on port doi port di");
+  log("server is listening on 3000 doi port di");
 });
 
